@@ -9,10 +9,10 @@ function ModalData(props) {
       let obj = props.filteredData[0].data.languages;
       if (event.key === "Enter" && event.target.value !=='') {
         let data = event.target.value;
-        let language = data.charAt(0).toUpperCase() + data.slice(1).toLowerCase();
-        console.log(language);
-        if(Object.values(obj).includes(language) !== true){
-          setTags([...tags, language]);
+        let languages = data.charAt(0).toUpperCase() + data.slice(1).toLowerCase();
+        console.log(languages);
+        if(Object.values(obj).includes(languages) !== true){
+          setTags([...tags, languages]);
           event.target.value = "";
         }
         else {
